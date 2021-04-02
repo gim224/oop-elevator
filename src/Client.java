@@ -2,6 +2,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import oop.Elevator;
+import oop.ElevatorManager;
 
 public class Client {
     public static void main(String[] args) throws Exception {
@@ -12,6 +13,8 @@ public class Client {
             elevators.add(new Elevator(i, "엘리베이터" + i));
         }
 
-        elevators.get(0).pressedButton(4);
+        ElevatorManager elevatorManager = new ElevatorManager(elevators);
+        elevatorManager.moveElevatorAt(3);
+
     }
 }
