@@ -11,6 +11,7 @@ public class Elevator {
 
     private int id;
     private String name;
+    private ElevatorState elevatorState;
 
     public Elevator(int id, String name) {
         this.id = id;
@@ -25,19 +26,14 @@ public class Elevator {
         return currentFloor;
     }
 
-    /** 버튼을 눌러라. */
-    public void pressedButton(int destinationFloor) {
+    /** 도착 층으로 이동하라. */
+    public void moveTo(int destinationFloor) {
         if (BUTTON_LIST.contains(destinationFloor)) {
-            goToDestinationFloor(destinationFloor);
+            System.out.printf("currentFloor: %2d, destinationFloor: %2d", currentFloor, destinationFloor);
+            currentFloor = destinationFloor;
         } else {
             new IllegalArgumentException("도착 층이 없습니다.");
         }
-    }
-
-    /** 도착 층으로 이동하라. */
-    private void goToDestinationFloor(int destinationFloor) {
-        System.out.printf("currentFloor: %2d, destinationFloor: %2d", currentFloor, destinationFloor);
-        currentFloor = destinationFloor;
     }
 
 }
