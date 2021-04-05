@@ -3,6 +3,7 @@ import java.util.List;
 
 import oop.Elevator;
 import oop.ElevatorManager;
+import oop.ElevatorSelectionStrategy;
 
 public class Client {
     public static void main(String[] args) throws Exception {
@@ -14,7 +15,14 @@ public class Client {
         }
 
         ElevatorManager elevatorManager = new ElevatorManager(elevators);
-        elevatorManager.moveElevatorAt(3);
+        elevatorManager.moveElevatorAt(3, new ElevatorSelectionStrategy() {
+
+            @Override
+            public Elevator chooseTheMostSuitablElevator(List<Elevator> elevators) {
+                return elevators.get(elevators.size() - 1);
+            }
+
+        });
 
     }
 }
