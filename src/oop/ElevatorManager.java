@@ -1,12 +1,10 @@
 package oop;
 
-import java.util.List;
-
 /** 엘레베이터관리 */
 public class ElevatorManager {
-    private final List<Elevator> elevators;
+    Elevators elevators;
 
-    public ElevatorManager(List<Elevator> elevators) {
+    public ElevatorManager(Elevators elevators) {
         this.elevators = elevators;
     }
 
