@@ -42,7 +42,7 @@ public class Elevator {
                     destinationFloor);
             currentFloor = destinationFloor;
         } else {
-            new IllegalArgumentException("도착 층이 없습니다.");
+            throw new IllegalArgumentException("도착 층이 없습니다.");
         }
     }
 

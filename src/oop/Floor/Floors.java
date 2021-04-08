@@ -1,8 +1,8 @@
 package oop.Floor;
 
 import java.util.List;
+import java.util.Set;
 import java.util.stream.Collectors;
-import java.util.stream.IntStream;
 
 public class Floors {
     private final List<Floor> floors;
@@ -13,7 +13,13 @@ public class Floors {
     }
 
     private void validateDuplicate(List<Floor> floors) {
+        Set<Integer> s = floors.stream().map(floor -> floor.getFloor()).collect(Collectors.toSet());
 
+        if (s.size() == floors.size()) {
+
+        } else {
+            throw new IllegalArgumentException("층은 중복될 수 없습니다.");
+        }
     }
 
     public List<Floor> getFloors() {
