@@ -1,4 +1,4 @@
-package oop;
+package oop.Elevator;
 
 /** 엘레베이터관리 */
 public class ElevatorManager {

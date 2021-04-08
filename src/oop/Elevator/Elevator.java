@@ -1,4 +1,4 @@
-package oop;
+package oop.Elevator;
 
 import java.util.List;
 import java.util.stream.Collectors;
@@ -11,7 +11,7 @@ public class Elevator {
     private int id;
     private String name;
     private int currentFloor;
-    private ElevatorState elevatorState;
+    // private ElevatorState elevatorState;
 
     public Elevator(int id, String name) {
         this(id, name, 1);
@@ -38,7 +38,7 @@ public class Elevator {
     /** 도착 층으로 이동하라. */
     public void moveTo(int destinationFloor) {
         if (BUTTON_LIST.contains(destinationFloor)) {
-            System.out.printf("elevatorId: %2d, currentFloor: %2d, destinationFloor: %2d", id, currentFloor,
+            System.out.printf("elevatorId: %2d, currentFloor: %2d, destinationFloor: %2d\n", id, currentFloor,
                     destinationFloor);
             currentFloor = destinationFloor;
         } else {
