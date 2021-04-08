@@ -11,7 +11,7 @@ public class Elevator {
     private int id;
     private String name;
     private int currentFloor;
-    // private ElevatorState elevatorState;
+    private ElevatorState elevatorState;
 
     public Elevator(int id, String name) {
         this(id, name, 1);
