@@ -34,6 +34,7 @@ public class Elevator {
     public void moveTo(int destinationFloor) {
         System.out.printf("elevatorId: %2d, currentFloor: %2d, destinationFloor: %2d\n", id, currentFloor,
                 destinationFloor);
+
         currentFloor = destinationFloor;
     }
 
