@@ -3,14 +3,14 @@ package oop.Button;
 import oop.Elevator.Elevator;
 
 /** 내부버튼 */
-public abstract class InnerButton {
+public abstract class InnerButton implements Pressiable {
 
-    private Elevator elevator; // 다중성이 적은 방향을 선택하라.
+    private Elevator elevator;
     private ButtonState buttonState;
 
     public InnerButton(Elevator elevator) {
         this.elevator = elevator;
-        this.buttonState = new StateDeactive();
+        this.buttonState = StateDeactive.getInstance();
     }
 
     public void setButtonState(ButtonState buttonState) {
@@ -20,7 +20,5 @@ public abstract class InnerButton {
     public Elevator getElevator() {
         return elevator;
     }
-
-    public abstract void press();
 
 }

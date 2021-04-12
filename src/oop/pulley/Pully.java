@@ -4,10 +4,11 @@ import oop.Elevator.Elevator;
 import oop.Elevator.StateMoveToDown;
 import oop.Elevator.StateMoveToUp;
 
-public class Pully implements Runnable {
+public class Pully {
 
     private int id;
     private Elevator elevator;
+    private PullyState pullyState;
 
     public Pully(int id, Elevator elevator) {
         this.id = id;
@@ -15,18 +16,13 @@ public class Pully implements Runnable {
     }
 
     /* 감아라 */
-    public void wind() {
+    private void wind(int destinationFloor) {
         elevator.setElevatorState(StateMoveToUp.getInstance());
     }
 
     /* 풀러라 */
-    public void unwind() {
+    private void unwind(int destinationFloor) {
         elevator.setElevatorState(StateMoveToDown.getInstance());
-    }
-
-    @Override
-    public void run() {
-
     }
 
 }
