@@ -27,3 +27,4 @@
 4. 엘리베이터가 해당 층에 도착.
 
 그렇다면 지금 버튼이라는 클래스를 추가해야겟다!
+![image](https://user-images.githubusercontent.com/17541680/114498936-0d5e2800-9c60-11eb-9663-5d0714d9048b.png)
