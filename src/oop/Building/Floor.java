@@ -10,4 +10,9 @@ public class Floor {
     public int getFloor() {
         return floor;
     }
+
+    @Override
+    public String toString() {
+        return "[" + floor + "층" + "]";
+    }
 }
