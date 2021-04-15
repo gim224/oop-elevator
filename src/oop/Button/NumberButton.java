@@ -1,7 +1,7 @@
 package oop.Button;
 
+import oop.Building.Floor;
 import oop.Elevator.Elevator;
-import oop.Floor.Floor;
 
 public class NumberButton extends InnerButton {
 

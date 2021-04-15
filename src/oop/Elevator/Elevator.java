@@ -1,14 +1,11 @@
 package oop.Elevator;
 
-import oop.pulley.Pully;
-
 public class Elevator {
 
     private int id;
     private String name;
     private int currentFloor;
 
-    private Pully pully;
     private ElevatorState elevatorState;
 
     public Elevator(int id, String name) {

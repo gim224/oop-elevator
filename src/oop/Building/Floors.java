@@ -1,12 +1,10 @@
-package oop.Floor;
+package oop.Building;
 
 import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
 
 public class Floors {
-    private static final int FIRST_FLOOR = 1;
-
     private final List<Floor> floors;
 
     public Floors(List<Floor> floors) {
@@ -25,10 +23,4 @@ public class Floors {
     public List<Floor> getFloors() {
         return floors;
     }
-
-    public Floor getFirstFloor() {
-        return floors.stream().filter(floor -> floor.getFloor() == FIRST_FLOOR).findFirst()
-                .orElseThrow(() -> new IllegalArgumentException("1층이 없을 수 없습니다."));
-    }
-
 }

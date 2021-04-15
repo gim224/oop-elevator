@@ -1,6 +1,6 @@
 package oop.Button;
 
-import oop.Floor.Floor;
+import oop.Building.Floor;
 
 public class StateDeactive implements ButtonState {
 

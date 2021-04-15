@@ -1,4 +1,4 @@
-package oop.Floor;
+package oop.Building;
 
 public class Floor {
     private int floor;
