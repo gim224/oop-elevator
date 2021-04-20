@@ -8,27 +8,27 @@ public class OuterButton implements Pressable {
     private Integer id;
     private OuterButtonDirection outerButtonDirection;
     private OuterButtonGroup outerButtonGroup;
-    private OuterButtonState outerButtonState;
+    private ButtonState buttonState;
 
     public OuterButton(Integer id, OuterButtonDirection outerButtonDirection, OuterButtonGroup outerButtonGroup) {
         this.id = id;
         this.outerButtonDirection = outerButtonDirection;
         this.outerButtonGroup = outerButtonGroup;
-        this.outerButtonState = DeactiveOuterButtonState.getInstance();
+        this.buttonState = DeactiveOuterButtonState.getInstance();
     }
 
-    private void setOuterButtonState(OuterButtonState outerButtonState) {
-        this.outerButtonState = outerButtonState;
+    private void setOuterButtonState(ButtonState buttonState) {
+        this.buttonState = buttonState;
     }
 
     @Override
     public void press() {
-        setOuterButtonState(outerButtonState.active(outerButtonGroup));
+        setOuterButtonState(buttonState.active());
     }
 
     @Override
     public void release() {
-        setOuterButtonState(outerButtonState.deactive(outerButtonGroup));
+        setOuterButtonState(buttonState.deactive());
     }
 
 }
