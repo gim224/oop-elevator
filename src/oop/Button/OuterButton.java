@@ -1,6 +1,6 @@
 package oop.Button;
 
-public class OuterButton implements Pressiable {
+public class OuterButton implements Pressable {
     public enum OuterButtonDirection {
         UP, DOWN
     };

@@ -26,7 +26,7 @@ public class ActiveOuterButtonState implements OuterButtonState {
     @Override
     public OuterButtonState deactive(OuterButtonGroup outerButtonGroup) {
         outerButtonGroup.cancelElevator();
-        return ActiveOuterButtonState.getInstance();
+        return DeactiveOuterButtonState.getInstance();
     }
 
 }
