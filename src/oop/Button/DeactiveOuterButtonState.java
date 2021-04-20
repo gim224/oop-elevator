@@ -1,25 +1,25 @@
 package oop.Button;
 
-public class DeactiveOuterButtonState implements OuterButtonState {
+public class DeactiveOuterButtonState implements ButtonState {
 
-    private static volatile OuterButtonState outerButtonState = new DeactiveOuterButtonState();
+    private static volatile ButtonState buttonState = new DeactiveOuterButtonState();
 
     private DeactiveOuterButtonState() {
         // do nothing
     }
 
-    public static OuterButtonState getInstance() {
-        return outerButtonState;
+    public static ButtonState getInstance() {
+        return buttonState;
     }
 
     @Override
-    public OuterButtonState active(OuterButtonGroup outerButtonGroup) {
-        outerButtonGroup.callElevator();
+    public ButtonState active() {
+        // callElevator.. turnOnLamp
         return ActiveOuterButtonState.getInstance();
     }
 
     @Override
-    public OuterButtonState deactive(OuterButtonGroup outerButtonGroup) {
+    public ButtonState deactive() {
         try {
             throw new IllegalAccessException("외부버튼은 이미 비활성상태입니다.");
         } catch (IllegalAccessException e) {
